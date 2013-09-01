@@ -1,0 +1,15 @@
+RANDOMIZE TIMER
+
+_TITLE "TV-NOISE"
+SCREEN _NEWIMAGE(240, 240, 32)
+
+DO
+    _LIMIT 25
+    FOR Y = 0 TO _HEIGHT
+        FOR X = 0 TO _WIDTH
+            COL = 256 * RND
+            PSET (X, Y), _RGB(COL, COL, COL)
+        NEXT
+    NEXT
+    _DISPLAY
+LOOP
