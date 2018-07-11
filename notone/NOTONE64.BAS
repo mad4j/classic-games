@@ -1,16 +1,19 @@
 ' NotOne - Daniele Olmisani, 2011
 ' inspired from Creative Computing, vol. 1
 
-5 RANDOMIZE TIMER
+10 _TITLE "NotOne - Daniele Olmisani, 2011"
 
-10 DIM R(10), C(10), L(12)
+20 RANDOMIZE TIMER
 
-20 FOR I = 2 TO 12: READ L(I): NEXT I
-30 DATA 18,18,9,9,6,6,6,9,9,18,18
+30 DIM R(10), C(10), L(12)
 
-40 FOR I = 1 TO 10: PRINT: PRINT "NOTONE - ROUND "; I
+40 FOR I = 2 TO 12: READ L(I): NEXT I
+50 DATA 18,18,9,9,6,6,6,9,9,18,18
+
+60 FOR I = 1 TO 10: PRINT: PRINT "NOTONE - ROUND "; I
 
     100 PRINT: PRINT "PLAYER TURN"
+    105 PRINT "--------------------"
     110 X = 0: T = 0
     120 DO: X = X + 1: R = ROLL + ROLL
         130 LOCATE , 1: PRINT "YOUR ROLL"; X; ":"; R; SPACE$(10)
@@ -28,6 +31,7 @@
 
 
     200 PRINT: PRINT "COMPUTER TURN"
+    205 PRINT "--------------------"
     210 X = 0: T = 0
     220 DO: X = X + 1: R = ROLL + ROLL
         230 PRINT "COMPUTER'S ROLL"; X; ":"; R
